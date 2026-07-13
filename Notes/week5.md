@@ -610,3 +610,187 @@ pytest
 ## Status
 
 ✅ Week 5 Day 2 Completed
+
+# Week 5 - Day 3
+# Topic: API Validation Testing with Pytest
+
+## Objective
+
+Learn how to test invalid API requests and ensure FastAPI properly validates incoming data using Pydantic.
+
+---
+
+## Why Validation Testing?
+
+Users do not always send valid input.
+
+Instead of crashing, APIs should reject invalid requests with meaningful error responses.
+
+Validation testing ensures the API is secure, reliable, and predictable.
+
+---
+
+## Existing Tests
+
+Previously implemented:
+
+- Home endpoint test
+- Prediction endpoint test
+
+These verify the API works correctly with valid input.
+
+---
+
+## New Validation Tests
+
+### 1. Missing Required Field
+
+Request:
+
+```json
+{}
+```
+
+Expected Result:
+
+```
+422 Unprocessable Entity
+```
+
+Reason:
+
+The required field `value` is missing.
+
+---
+
+### 2. Invalid Data Type
+
+Request:
+
+```json
+{
+    "value": "hello"
+}
+```
+
+Expected Result:
+
+```
+422 Unprocessable Entity
+```
+
+Reason:
+
+The API expects a float but received a string.
+
+---
+
+### 3. Null Value
+
+Request:
+
+```json
+{
+    "value": null
+}
+```
+
+Expected Result:
+
+```
+422 Unprocessable Entity
+```
+
+Reason:
+
+The field cannot be null because it is defined as a float.
+
+---
+
+### 4. Negative Number Test (Bonus)
+
+Request:
+
+```json
+{
+    "value": -5
+}
+```
+
+Expected Result:
+
+```
+200 OK
+```
+
+Reason:
+
+The current model accepts any floating-point number.
+
+No business validation has been implemented yet.
+
+---
+
+## Why FastAPI Returns 422
+
+Input validation is performed before the endpoint function executes.
+
+Flow:
+
+```
+Client Request
+       │
+       ▼
+Pydantic Validation
+       │
+ ┌─────┴─────┐
+ │           │
+Valid     Invalid
+ │           │
+ ▼           ▼
+API      Return 422
+Function
+```
+
+If validation fails, the endpoint function is never executed.
+
+---
+
+## Test Execution
+
+Run:
+
+```bash
+pytest
+```
+
+Result:
+
+```
+6 passed
+```
+
+---
+
+## Key Learnings
+
+- FastAPI automatically validates request data.
+- Pydantic checks input types before executing endpoint logic.
+- Invalid requests return HTTP 422.
+- Unit tests should include both success and failure scenarios.
+- Edge-case testing increases application reliability.
+- Automated tests help prevent bugs from reaching production.
+
+---
+
+## Commands Used
+
+```bash
+pytest
+```
+
+---
+
+## Status
+
+✅ Week 5 Day 3 Completed
