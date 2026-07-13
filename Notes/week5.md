@@ -414,3 +414,199 @@ Today we successfully:
 - Established a professional Git workflow for the remainder of the MLOps roadmap
 
 The project is now version-controlled and securely hosted on GitHub, providing a solid foundation for CI/CD, collaboration, and future deployments.
+
+
+
+# Week 5 - Day 2
+# Topic: Unit Testing FastAPI using Pytest
+
+## Objective
+
+Learn how to automatically test FastAPI endpoints using pytest before deploying applications.
+
+---
+
+## Why Testing?
+
+Testing helps verify that the API behaves correctly without manually using Swagger UI.
+
+Benefits:
+
+- Detect bugs early
+- Prevent deployment failures
+- Validate API responses automatically
+- Essential for CI/CD pipelines
+
+---
+
+## Packages Installed
+
+```bash
+pip install pytest
+pip install httpx
+```
+
+Update dependencies:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+## Project Structure
+
+```
+mlops-practice/
+│
+├── api/
+├── tests/
+│   └── test_api.py
+├── models/
+├── notebooks/
+├── Notes/
+├── Dockerfile
+└── requirements.txt
+```
+
+---
+
+## Test Client
+
+FastAPI provides TestClient for testing APIs without running Uvicorn.
+
+```python
+from fastapi.testclient import TestClient
+from api.main import app
+
+client = TestClient(app)
+```
+
+---
+
+## Home Endpoint Test
+
+```python
+response = client.get("/")
+```
+
+Checks:
+
+- Status Code = 200
+- Correct JSON response
+
+---
+
+## Prediction Endpoint Test
+
+```python
+response = client.post(
+    "/predict",
+    json={
+        "value": 5
+    }
+)
+```
+
+Checks:
+
+- Status Code = 200
+- Prediction exists
+- Prediction is float
+
+---
+
+## Bug Encountered
+
+Initial test failed.
+
+Error:
+
+```
+422 Unprocessable Entity
+```
+
+Reason:
+
+Test sent:
+
+```json
+{
+    "input":5
+}
+```
+
+But API expected:
+
+```json
+{
+    "value":5
+}
+```
+
+The request field name did not match the Pydantic schema.
+
+---
+
+## Fix
+
+Changed:
+
+```python
+json={
+    "input":5
+}
+```
+
+to
+
+```python
+json={
+    "value":5
+}
+```
+
+---
+
+## Test Result
+
+```bash
+pytest
+```
+
+Output:
+
+```
+2 passed
+```
+
+---
+
+## Key Learnings
+
+- Unit testing validates API functionality.
+- TestClient simulates API requests.
+- pytest automates testing.
+- Pydantic validates request bodies.
+- A 422 error usually indicates invalid request data.
+- Tests should match the API schema exactly.
+
+---
+
+## Commands Learned
+
+```bash
+pip install pytest
+
+pip install httpx
+
+pip freeze > requirements.txt
+
+pytest
+```
+
+---
+
+## Status
+
+✅ Week 5 Day 2 Completed
