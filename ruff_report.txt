@@ -1,0 +1,1544 @@
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+ --> notebooks/week1_cheetsheet.ipynb:cell 1:1:4
+  |
+1 | 1. Imports (Common ML Stack)
+  |    ^^^^^^^
+2 | NumPy
+3 | import numpy as np
+  |
+
+invalid-syntax: Expected `,`, found name
+ --> notebooks/week1_cheetsheet.ipynb:cell 1:1:20
+  |
+1 | 1. Imports (Common ML Stack)
+  |                    ^^
+2 | NumPy
+3 | import numpy as np
+  |
+
+invalid-syntax: Expected `,`, found name
+ --> notebooks/week1_cheetsheet.ipynb:cell 1:1:23
+  |
+1 | 1. Imports (Common ML Stack)
+  |                       ^^^^^
+2 | NumPy
+3 | import numpy as np
+  |
+
+invalid-syntax: Expected an expression
+ --> notebooks/week1_cheetsheet.ipynb:cell 1:5:9
+  |
+3 | import numpy as np
+4 |
+5 | Purpose:
+  |         ^
+6 |
+7 | Numerical operations
+  |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+ --> notebooks/week1_cheetsheet.ipynb:cell 1:7:11
+  |
+5 | Purpose:
+6 |
+7 | Numerical operations
+  |           ^^^^^^^^^^
+8 | Arrays
+9 | Matrix operations
+  |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:9:8
+   |
+ 7 | Numerical operations
+ 8 | Arrays
+ 9 | Matrix operations
+   |        ^^^^^^^^^^
+10 | Pandas
+11 | import pandas as pd
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:13:9
+   |
+11 | import pandas as pd
+12 |
+13 | Purpose:
+   |         ^
+14 |
+15 | Dataset handling
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:15:9
+   |
+13 | Purpose:
+14 |
+15 | Dataset handling
+   |         ^^^^^^^^
+16 | CSV files
+17 | Data cleaning
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:16:5
+   |
+15 | Dataset handling
+16 | CSV files
+   |     ^^^^^
+17 | Data cleaning
+18 | Matplotlib
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:17:6
+   |
+15 | Dataset handling
+16 | CSV files
+17 | Data cleaning
+   |      ^^^^^^^^
+18 | Matplotlib
+19 | import matplotlib.pyplot as plt
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:21:9
+   |
+19 | import matplotlib.pyplot as plt
+20 |
+21 | Purpose:
+   |         ^
+22 |
+23 | Graphs
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:28:9
+   |
+26 | import sklearn
+27 |
+28 | Purpose:
+   |         ^
+29 |
+30 | ML models
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:30:4
+   |
+28 | Purpose:
+29 |
+30 | ML models
+   |    ^^^^^^
+31 | Preprocessing
+32 | Evaluation
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:34:9
+   |
+32 | Evaluation
+33 |
+34 | Example:
+   |         ^
+35 |
+36 | from sklearn.model_selection import train_test_split
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:37:4
+   |
+36 | from sklearn.model_selection import train_test_split
+37 | 2. NumPy Cheat Sheet
+   |    ^^^^^
+38 | Create Arrays
+39 | np.array([1,2,3])
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:37:10
+   |
+36 | from sklearn.model_selection import train_test_split
+37 | 2. NumPy Cheat Sheet
+   |          ^^^^^
+38 | Create Arrays
+39 | np.array([1,2,3])
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:37:16
+   |
+36 | from sklearn.model_selection import train_test_split
+37 | 2. NumPy Cheat Sheet
+   |                ^^^^^
+38 | Create Arrays
+39 | np.array([1,2,3])
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:38:8
+   |
+36 | from sklearn.model_selection import train_test_split
+37 | 2. NumPy Cheat Sheet
+38 | Create Arrays
+   |        ^^^^^^
+39 | np.array([1,2,3])
+40 | np.zeros(5)
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:42:8
+   |
+40 | np.zeros(5)
+41 |
+42 | Output:
+   |        ^
+43 |
+44 | [0. 0. 0. 0. 0.]
+   |
+
+invalid-syntax: Expected `,`, found float
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:44:5
+   |
+42 | Output:
+43 |
+44 | [0. 0. 0. 0. 0.]
+   |     ^^
+45 | np.ones(5)
+46 | Range
+   |
+
+invalid-syntax: Expected `,`, found float
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:44:8
+   |
+42 | Output:
+43 |
+44 | [0. 0. 0. 0. 0.]
+   |        ^^
+45 | np.ones(5)
+46 | Range
+   |
+
+invalid-syntax: Expected `,`, found float
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:44:11
+   |
+42 | Output:
+43 |
+44 | [0. 0. 0. 0. 0.]
+   |           ^^
+45 | np.ones(5)
+46 | Range
+   |
+
+invalid-syntax: Expected `,`, found float
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:44:14
+   |
+42 | Output:
+43 |
+44 | [0. 0. 0. 0. 0.]
+   |              ^^
+45 | np.ones(5)
+46 | Range
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:49:8
+   |
+47 | np.arange(0,10)
+48 |
+49 | Output:
+   |        ^
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:3
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |   ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:5
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |     ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:7
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |       ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:9
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |         ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:11
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |           ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:13
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |             ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:15
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |               ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:17
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |                 ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:51:19
+   |
+49 | Output:
+50 |
+51 | 0 1 2 3 4 5 6 7 8 9
+   |                   ^
+52 | Shape
+53 | array.shape
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:55:9
+   |
+53 | array.shape
+54 |
+55 | Example:
+   |         ^
+56 |
+57 | (100,5)
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:59:9
+   |
+57 | (100,5)
+58 |
+59 | Meaning:
+   |         ^
+60 |
+61 | 100 rows
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:61:5
+   |
+59 | Meaning:
+60 |
+61 | 100 rows
+   |     ^^^^
+62 | 5 columns
+63 | Reshape
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:62:3
+   |
+61 | 100 rows
+62 | 5 columns
+   |   ^^^^^^^
+63 | Reshape
+64 | array.reshape(2,5)
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:66:8
+   |
+64 | array.reshape(2,5)
+65 |
+66 | Change dimensions.
+   |        ^^^^^^^^^^
+67 |
+68 | Statistics
+   |
+
+invalid-syntax: Expected an identifier
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:66:19
+   |
+64 | array.reshape(2,5)
+65 |
+66 | Change dimensions.
+   |                   ^
+67 |
+68 | Statistics
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:75:4
+   |
+73 | np.max()
+74 | np.sum()
+75 | 3. Pandas Cheat Sheet
+   |    ^^^^^^
+76 | Create DataFrame
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:75:11
+   |
+73 | np.max()
+74 | np.sum()
+75 | 3. Pandas Cheat Sheet
+   |           ^^^^^
+76 | Create DataFrame
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:75:17
+   |
+73 | np.max()
+74 | np.sum()
+75 | 3. Pandas Cheat Sheet
+   |                 ^^^^^
+76 | Create DataFrame
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:76:8
+   |
+74 | np.sum()
+75 | 3. Pandas Cheat Sheet
+76 | Create DataFrame
+   |        ^^^^^^^^^
+77 |
+78 | From dictionary:
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:78:6
+   |
+76 | Create DataFrame
+77 |
+78 | From dictionary:
+   |      ^^^^^^^^^^
+79 |
+80 | df = pd.DataFrame(data)
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:78:17
+   |
+76 | Create DataFrame
+77 |
+78 | From dictionary:
+   |                 ^
+79 |
+80 | df = pd.DataFrame(data)
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:81:6
+   |
+80 | df = pd.DataFrame(data)
+81 | Read Files
+   |      ^^^^^
+82 |
+83 | CSV:
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:83:5
+   |
+81 | Read Files
+82 |
+83 | CSV:
+   |     ^
+84 |
+85 | df = pd.read_csv("data.csv")
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:87:7
+   |
+85 | df = pd.read_csv("data.csv")
+86 |
+87 | Excel:
+   |       ^
+88 |
+89 | df = pd.read_excel("data.xlsx")
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:90:12
+   |
+89 | df = pd.read_excel("data.xlsx")
+90 | Understand Dataset
+   |            ^^^^^^^
+91 |
+92 | First rows:
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:92:7
+   |
+90 | Understand Dataset
+91 |
+92 | First rows:
+   |       ^^^^
+93 |
+94 | df.head()
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:92:12
+   |
+90 | Understand Dataset
+91 |
+92 | First rows:
+   |            ^
+93 |
+94 | df.head()
+   |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:96:6
+   |
+94 | df.head()
+95 |
+96 | Last rows:
+   |      ^^^^
+97 |
+98 | df.tail()
+   |
+
+invalid-syntax: Expected an expression
+  --> notebooks/week1_cheetsheet.ipynb:cell 1:96:11
+   |
+94 | df.head()
+95 |
+96 | Last rows:
+   |           ^
+97 |
+98 | df.tail()
+   |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:100:7
+    |
+ 98 | df.tail()
+ 99 |
+100 | Shape:
+    |       ^
+101 |
+102 | df.shape
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:104:9
+    |
+102 | df.shape
+103 |
+104 | Example:
+    |         ^
+105 |
+106 | (1000,10)
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:108:7
+    |
+106 | (1000,10)
+107 |
+108 | means:
+    |       ^
+109 |
+110 | 1000 rows
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:110:6
+    |
+108 | means:
+109 |
+110 | 1000 rows
+    |      ^^^^
+111 | 10 columns
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:111:4
+    |
+110 | 1000 rows
+111 | 10 columns
+    |    ^^^^^^^
+112 |
+113 | Information:
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:113:13
+    |
+111 | 10 columns
+112 |
+113 | Information:
+    |             ^
+114 |
+115 | df.info()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:117:12
+    |
+115 | df.info()
+116 |
+117 | Statistics:
+    |            ^
+118 |
+119 | df.describe()
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:120:11
+    |
+119 | df.describe()
+120 | Selecting Data
+    |           ^^^^
+121 |
+122 | Column:
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:122:8
+    |
+120 | Selecting Data
+121 |
+122 | Column:
+    |        ^
+123 |
+124 | df["salary"]
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:126:10
+    |
+124 | df["salary"]
+125 |
+126 | Multiple columns:
+    |          ^^^^^^^
+127 |
+128 | df[["age","salary"]]
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:126:18
+    |
+124 | df["salary"]
+125 |
+126 | Multiple columns:
+    |                  ^
+127 |
+128 | df[["age","salary"]]
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:130:6
+    |
+128 | df[["age","salary"]]
+129 |
+130 | Rows:
+    |      ^
+131 |
+132 | df.iloc[0]
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:133:9
+    |
+132 | df.iloc[0]
+133 | Missing Data
+    |         ^^^^
+134 |
+135 | Check:
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:135:7
+    |
+133 | Missing Data
+134 |
+135 | Check:
+    |       ^
+136 |
+137 | df.isnull()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:139:7
+    |
+137 | df.isnull()
+138 |
+139 | Count:
+    |       ^
+140 |
+141 | df.isnull().sum()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:143:8
+    |
+141 | df.isnull().sum()
+142 |
+143 | Remove:
+    |        ^
+144 |
+145 | df.dropna()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:147:6
+    |
+145 | df.dropna()
+146 |
+147 | Fill:
+    |      ^
+148 |
+149 | df.fillna(value)
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:150:11
+    |
+149 | df.fillna(value)
+150 | Duplicate Data
+    |           ^^^^
+151 |
+152 | Check:
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:152:7
+    |
+150 | Duplicate Data
+151 |
+152 | Check:
+    |       ^
+153 |
+154 | df.duplicated()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:156:7
+    |
+154 | df.duplicated()
+155 |
+156 | Count:
+    |       ^
+157 |
+158 | df.duplicated().sum()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:160:8
+    |
+158 | df.duplicated().sum()
+159 |
+160 | Remove:
+    |        ^
+161 |
+162 | df.drop_duplicates()
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:163:6
+    |
+162 | df.drop_duplicates()
+163 | Data Conversion
+    |      ^^^^^^^^^^
+164 |
+165 | Change type:
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:165:8
+    |
+163 | Data Conversion
+164 |
+165 | Change type:
+    |        ^^^^
+166 |
+167 | df.astype()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:165:13
+    |
+163 | Data Conversion
+164 |
+165 | Change type:
+    |             ^
+166 |
+167 | df.astype()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:169:9
+    |
+167 | df.astype()
+168 |
+169 | Example:
+    |         ^
+170 |
+171 | df["age"].astype(int)
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:174:9
+    |
+172 | Encoding
+173 |
+174 | Convert text:
+    |         ^^^^
+175 |
+176 | pd.get_dummies(df)
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:174:14
+    |
+172 | Encoding
+173 |
+174 | Convert text:
+    |              ^
+175 |
+176 | pd.get_dummies(df)
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:178:9
+    |
+176 | pd.get_dummies(df)
+177 |
+178 | Example:
+    |         ^
+179 |
+180 | Before:
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:180:8
+    |
+178 | Example:
+179 |
+180 | Before:
+    |        ^
+181 |
+182 | city
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:187:7
+    |
+185 | Mumbai
+186 |
+187 | After:
+    |       ^
+188 |
+189 | city_Pune
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:193:7
+    |
+191 | Feature and Target
+192 |
+193 | Input:
+    |       ^
+194 |
+195 | X = df.drop("target",axis=1)
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:197:8
+    |
+195 | X = df.drop("target",axis=1)
+196 |
+197 | Output:
+    |        ^
+198 |
+199 | y = df["target"]
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:200:12
+    |
+199 | y = df["target"]
+200 | Train/Test Split
+    |            ^^^^^
+201 | train_test_split()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:203:9
+    |
+201 | train_test_split()
+202 |
+203 | Example:
+    |         ^
+204 |
+205 | X_train,X_test,y_train,y_test = train_test_split(
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:212:8
+    |
+210 | Scaling
+211 |
+212 | Import:
+    |        ^
+213 |
+214 | from sklearn.preprocessing import StandardScaler
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:216:8
+    |
+214 | from sklearn.preprocessing import StandardScaler
+215 |
+216 | Create:
+    |        ^
+217 |
+218 | scaler = StandardScaler()
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:220:7
+    |
+218 | scaler = StandardScaler()
+219 |
+220 | Apply:
+    |       ^
+221 |
+222 | X_scaled = scaler.fit_transform(X)
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:6
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |      ^^^^^^^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:14
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |              ^^^^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:19
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |                   ^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:21
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |                     ^^^^^^^^^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:31
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |                               ^^^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Expected an expression
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:223:35
+    |
+222 | X_scaled = scaler.fit_transform(X)
+223 | Your current Week 1 knowledge map:
+    |                                   ^
+224 | Python
+225 |  |
+    |
+
+invalid-syntax: Unexpected indentation
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:225:1
+    |
+223 | Your current Week 1 knowledge map:
+224 | Python
+225 |  |
+    | ^
+226 |  +-- NumPy
+227 |  |     |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:225:2
+    |
+223 | Your current Week 1 knowledge map:
+224 | Python
+225 |  |
+    |  ^
+226 |  +-- NumPy
+227 |  |     |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:225:3
+    |
+223 | Your current Week 1 knowledge map:
+224 | Python
+225 |  |
+    |   ^
+226 |  +-- NumPy
+227 |  |     |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:227:2
+    |
+225 |  |
+226 |  +-- NumPy
+227 |  |     |
+    |  ^
+228 |  |     +-- Arrays
+229 |  |     +-- Shape
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:227:8
+    |
+225 |  |
+226 |  +-- NumPy
+227 |  |     |
+    |        ^
+228 |  |     +-- Arrays
+229 |  |     +-- Shape
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:227:9
+    |
+225 |  |
+226 |  +-- NumPy
+227 |  |     |
+    |         ^
+228 |  |     +-- Arrays
+229 |  |     +-- Shape
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:228:2
+    |
+226 |  +-- NumPy
+227 |  |     |
+228 |  |     +-- Arrays
+    |  ^
+229 |  |     +-- Shape
+230 |  |     +-- Math
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:229:2
+    |
+227 |  |     |
+228 |  |     +-- Arrays
+229 |  |     +-- Shape
+    |  ^
+230 |  |     +-- Math
+231 |  |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:230:2
+    |
+228 |  |     +-- Arrays
+229 |  |     +-- Shape
+230 |  |     +-- Math
+    |  ^
+231 |  |
+232 |  +-- Pandas
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:231:2
+    |
+229 |  |     +-- Shape
+230 |  |     +-- Math
+231 |  |
+    |  ^
+232 |  +-- Pandas
+233 |        |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:231:3
+    |
+229 |  |     +-- Shape
+230 |  |     +-- Math
+231 |  |
+    |   ^
+232 |  +-- Pandas
+233 |        |
+    |
+
+invalid-syntax: Unexpected indentation
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:233:1
+    |
+231 |  |
+232 |  +-- Pandas
+233 |        |
+    | ^^^^^^^
+234 |        +-- DataFrame
+235 |        +-- Loading Data
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:233:8
+    |
+231 |  |
+232 |  +-- Pandas
+233 |        |
+    |        ^
+234 |        +-- DataFrame
+235 |        +-- Loading Data
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:233:9
+    |
+231 |  |
+232 |  +-- Pandas
+233 |        |
+    |         ^
+234 |        +-- DataFrame
+235 |        +-- Loading Data
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:235:20
+    |
+233 |        |
+234 |        +-- DataFrame
+235 |        +-- Loading Data
+    |                    ^^^^
+236 |        +-- Cleaning
+237 |        +-- Selecting
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:239:8
+    |
+237 |        +-- Selecting
+238 |        +-- Transforming
+239 |        |
+    |        ^
+240 |        +-- ML Preparation
+241 |              |
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:239:9
+    |
+237 |        +-- Selecting
+238 |        +-- Transforming
+239 |        |
+    |         ^
+240 |        +-- ML Preparation
+241 |              |
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:240:15
+    |
+238 |        +-- Transforming
+239 |        |
+240 |        +-- ML Preparation
+    |               ^^^^^^^^^^^
+241 |              |
+242 |              +-- X
+    |
+
+invalid-syntax: Unexpected indentation
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:241:1
+    |
+239 |        |
+240 |        +-- ML Preparation
+241 |              |
+    | ^^^^^^^^^^^^^
+242 |              +-- X
+243 |              +-- y
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:241:14
+    |
+239 |        |
+240 |        +-- ML Preparation
+241 |              |
+    |              ^
+242 |              +-- X
+243 |              +-- y
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:241:15
+    |
+239 |        |
+240 |        +-- ML Preparation
+241 |              |
+    |               ^
+242 |              +-- X
+243 |              +-- y
+    |
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:244:29
+    |
+242 |              +-- X
+243 |              +-- y
+244 |              +-- Train/Test Split
+    |                             ^^^^^
+245 |              +-- Scaling
+    |
+
+invalid-syntax: Expected a statement
+   --> notebooks/week1_cheetsheet.ipynb:cell 1:245:25
+    |
+243 |              +-- y
+244 |              +-- Train/Test Split
+245 |              +-- Scaling
+    |                         ^
+    |
+
+E402 Module level import not at top of cell
+  --> notebooks/week1_pandas.ipynb:cell 4:67:1
+   |
+65 | #Scaling
+66 |
+67 | from sklearn.preprocessing import StandardScaler
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+68 |
+69 | scaler= StandardScaler()
+   |
+
+F401 [*] `numpy` imported but unused
+  --> notebooks/week2_classification.ipynb:cell 1:21:17
+   |
+20 | import pandas as pd
+21 | import numpy as np
+   |                 ^^
+22 | import matplotlib.pyplot as plt
+   |
+help: Remove unused import: `numpy`
+
+F401 [*] `matplotlib.pyplot` imported but unused
+  --> notebooks/week2_classification.ipynb:cell 1:22:29
+   |
+20 | import pandas as pd
+21 | import numpy as np
+22 | import matplotlib.pyplot as plt
+   |                             ^^^
+23 |
+24 | # import for ML
+   |
+help: Remove unused import: `matplotlib.pyplot`
+
+E402 Module level import not at top of cell
+   --> notebooks/week2_classification.ipynb:cell 1:104:1
+    |
+102 | ## Accuracy check
+103 |
+104 | from sklearn.metrics import accuracy_score
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+105 |
+106 | accuracy = accuracy_score(
+    |
+
+F811 [*] Redefinition of unused `accuracy_score` from cell 1, line 28
+   --> notebooks/week2_classification.ipynb:cell 1:104:29
+    |
+102 | ## Accuracy check
+103 |
+104 | from sklearn.metrics import accuracy_score
+    |                             ^^^^^^^^^^^^^^ `accuracy_score` redefined here
+105 |
+106 | accuracy = accuracy_score(
+    |
+   ::: notebooks/week2_classification.ipynb:cell 1:28:29
+    |
+ 26 | from sklearn.model_selection import train_test_split
+ 27 | from sklearn.linear_model import LogisticRegression
+ 28 | from sklearn.metrics import accuracy_score
+    |                             -------------- previous definition of `accuracy_score` here
+ 29 |
+ 30 | ## Create Classification Datasets
+    |
+help: Remove definition: `accuracy_score`
+
+F401 [*] `numpy` imported but unused
+ --> notebooks/week2_metrics.ipynb:cell 1:6:17
+  |
+5 | import pandas as pd
+6 | import numpy as np
+  |                 ^^
+7 | from sklearn.metrics import (
+8 |     accuracy_score,
+  |
+help: Remove unused import: `numpy`
+
+F401 [*] `numpy` imported but unused
+  --> notebooks/week2_ml_basics.ipynb:cell 1:26:17
+   |
+25 | import pandas as pd
+26 | import numpy as np
+   |                 ^^
+27 |
+28 | import matplotlib.pyplot as plt
+   |
+help: Remove unused import: `numpy`
+
+E402 Module level import not at top of cell
+  --> notebooks/week2_ml_basics.ipynb:cell 1:69:1
+   |
+67 | ## Train/Test Split
+68 |
+69 | from sklearn.model_selection import train_test_split
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+70 |
+71 | x_train, x_test, y_train, y_test = train_test_split(
+   |
+
+E402 Module level import not at top of cell
+  --> notebooks/week2_ml_basics.ipynb:cell 1:81:1
+   |
+79 | ## Train first model
+80 |
+81 | from sklearn.linear_model import LinearRegression
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+82 |
+83 | #create model
+   |
+
+E402 Module level import not at top of cell
+   --> notebooks/week2_ml_basics.ipynb:cell 1:112:1
+    |
+110 | ## Check Accuracy
+111 |
+112 | from sklearn.metrics import mean_absolute_error
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+113 |
+114 | error = mean_absolute_error(
+    |
+
+F401 [*] `numpy` imported but unused
+  --> notebooks/week2_model_comparison.ipynb:cell 1:56:17
+   |
+55 | import pandas as pd
+56 | import numpy as np
+   |                 ^^
+57 |
+58 | data = {
+   |
+help: Remove unused import: `numpy`
+
+E402 Module level import not at top of cell
+  --> notebooks/week2_model_comparison.ipynb:cell 1:75:1
+   |
+73 | ## 4 Split Data
+74 |
+75 | from sklearn.model_selection import train_test_split
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+76 |
+77 | x_train, x_test, y_train, y_test = train_test_split(
+   |
+
+E402 Module level import not at top of cell
+  --> notebooks/week2_model_comparison.ipynb:cell 1:87:1
+   |
+85 | ## 5 Model 1 - Linear Regression
+86 |
+87 | from sklearn.linear_model import LinearRegression
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+88 |
+89 | linear_model = LinearRegression()
+   |
+
+E402 Module level import not at top of cell
+   --> notebooks/week2_model_comparison.ipynb:cell 1:104:1
+    |
+102 | ## 6 Model 2 - Polynomial Regression (more complex model)
+103 |
+104 | from sklearn.preprocessing import PolynomialFeatures #import
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+105 |
+106 | poly = PolynomialFeatures( 
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week2_model_comparison.ipynb:cell 1:141:1
+    |
+140 | # import
+141 | from sklearn.metrics import mean_absolute_error
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+142 |
+143 | # linear error
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:120:1
+    |
+119 | # 1 Import PyTorch
+120 | import torch
+    | ^^^^^^^^^^^^
+121 |
+122 | from torch import nn #nn means neural network module which provides layers, loss functions, models
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:122:1
+    |
+120 | import torch
+121 |
+122 | from torch import nn #nn means neural network module which provides layers, loss functions, models
+    | ^^^^^^^^^^^^^^^^^^^^
+123 |
+124 | # 2 Create simple Data
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:210:1
+    |
+208 | # 1 import 
+209 |
+210 | import torch
+    | ^^^^^^^^^^^^
+211 | from torch import nn
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:211:1
+    |
+210 | import torch
+211 | from torch import nn
+    | ^^^^^^^^^^^^^^^^^^^^
+212 |
+213 | # 2 Create Data
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:304:1
+    |
+302 | # 1 Create and Train Model Again
+303 |
+304 | import torch
+    | ^^^^^^^^^^^^
+305 | from torch import nn
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:305:1
+    |
+304 | import torch
+305 | from torch import nn
+    | ^^^^^^^^^^^^^^^^^^^^
+306 |
+307 | x = torch.tensor([
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:373:1
+    |
+371 | )
+372 |
+373 | import os #verify model saved
+    | ^^^^^^^^^
+374 |
+375 | os.listdir("/home/malik/mlops-practice/models")
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:394:1
+    |
+393 | # 1 import 
+394 | import torch
+    | ^^^^^^^^^^^^
+395 | from torch import nn
+    |
+
+E402 Module level import not at top of cell
+   --> notebooks/week3_pytorch.ipynb:cell 1:395:1
+    |
+393 | # 1 import 
+394 | import torch
+395 | from torch import nn
+    | ^^^^^^^^^^^^^^^^^^^^
+396 |
+397 | # 2 Create Same Model Architecture
+    |
+
+Found 143 errors.
+[*] 6 fixable with the `--fix` option.

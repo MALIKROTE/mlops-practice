@@ -12,18 +12,11 @@ def test_home():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {
-        "message": "PyTorch Prediction API"
-    }
+    assert response.json() == {"message": "PyTorch Prediction API"}
 
 
 def test_prediction():
-    response = client.post(
-        "/predict",
-        json={
-            "value": 5
-        }
-    )
+    response = client.post("/predict", json={"value": 5})
 
     assert response.status_code == 200
 
@@ -36,50 +29,35 @@ def test_prediction():
     assert isinstance(data["prediction"], float)
 
     ##### Week 5 - Day 3 #####
+
+
 ##### Testing Invalid Requests #####
 
 
 def test_prediction_missing_value():
 
-    response = client.post(
-        "/predict",
-        json={}
-    )
+    response = client.post("/predict", json={})
 
     assert response.status_code == 422
 
 
 def test_prediction_invalid_type():
 
-    response = client.post(
-        "/predict",
-        json={
-            "value": "hello"
-        }
-    )
+    response = client.post("/predict", json={"value": "hello"})
 
     assert response.status_code == 422
 
 
 def test_prediction_null_value():
 
-    response = client.post(
-        "/predict",
-        json={
-            "value": None
-        }
-    )
+    response = client.post("/predict", json={"value": None})
 
     assert response.status_code == 422
 
+
 def test_prediction_negative_number():
 
-    response = client.post(
-        "/predict",
-        json={
-            "value": -5
-        }
-    )
+    response = client.post("/predict", json={"value": -5})
 
     assert response.status_code == 200
 

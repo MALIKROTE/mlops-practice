@@ -794,3 +794,292 @@ pytest
 ## Status
 
 ✅ Week 5 Day 3 Completed
+
+# Week 5 - Day 4 Notes
+
+## Topic: GitHub Actions (Continuous Integration)
+
+### Objective
+
+Learn how to automate testing using GitHub Actions so that every code change pushed to GitHub is automatically tested.
+
+---
+
+# What is GitHub Actions?
+
+GitHub Actions is GitHub's built-in Continuous Integration (CI) and Continuous Deployment (CD) platform.
+
+Instead of manually running tests every time we change the code, GitHub Actions automatically runs them whenever we push code to the repository.
+
+Example workflow:
+
+```text
+Write Code
+    │
+    ▼
+git push
+    │
+    ▼
+GitHub Actions
+    │
+    ▼
+Create Ubuntu Runner
+    │
+    ▼
+Install Dependencies
+    │
+    ▼
+Run Tests
+    │
+    ▼
+Pass / Fail
+```
+
+---
+
+# Why CI is Important
+
+Benefits of Continuous Integration:
+
+* Automatically verifies every code change.
+* Prevents broken code from reaching production.
+* Ensures the project works on a clean machine.
+* Saves time by detecting issues early.
+* Standard practice in DevOps and MLOps teams.
+
+---
+
+# GitHub Actions Workflow
+
+Created workflow file:
+
+```text
+.github/workflows/python-tests.yml
+```
+
+Purpose:
+
+* Trigger on every push
+* Checkout repository
+* Install Python
+* Install dependencies
+* Execute pytest
+
+---
+
+# First CI Failure
+
+The first workflow failed with the error:
+
+```text
+ERROR: Invalid requirement: 'pip freeze'
+```
+
+Reason:
+
+`requirements.txt` mistakenly contained:
+
+```text
+fastapi
+uvicorn
+pydantic
+pip freeze
+```
+
+`pip freeze` is a terminal command, **not** a Python package.
+
+---
+
+# Correct requirements.txt
+
+Updated to:
+
+```text
+fastapi
+uvicorn
+pydantic
+torch
+pytest
+httpx
+```
+
+Later, we also decided to add:
+
+```text
+numpy
+```
+
+because PyTorch uses NumPy in many ML workflows.
+
+---
+
+# Important Difference
+
+Correct command:
+
+```bash
+pip freeze > requirements.txt
+```
+
+This command **generates** a requirements file.
+
+Incorrect:
+
+```text
+pip freeze
+```
+
+inside `requirements.txt`.
+
+Remember:
+
+* `pip freeze` → terminal command
+* `requirements.txt` → package list only
+
+---
+
+# GitHub Authentication
+
+While pushing to GitHub, authentication initially failed:
+
+```text
+Invalid username or token.
+Password authentication is not supported.
+```
+
+After re-authenticating, the repository was successfully pushed.
+
+---
+
+# Successful GitHub Actions Run
+
+After fixing `requirements.txt`, GitHub Actions completed successfully.
+
+Result:
+
+```text
+6 tests passed
+```
+
+Workflow executed:
+
+1. Created Ubuntu runner
+2. Installed Python
+3. Installed project dependencies
+4. Executed pytest
+5. All tests passed
+
+This confirms the project works correctly on a clean environment.
+
+---
+
+# Warnings Observed
+
+### FastAPI Warning
+
+```text
+StarletteDeprecationWarning
+```
+
+Safe to ignore for now.
+
+It comes from FastAPI/Starlette internals.
+
+---
+
+### PyTorch Warning
+
+```text
+No module named 'numpy'
+```
+
+Reason:
+
+NumPy was missing from the GitHub runner.
+
+Solution:
+
+Add `numpy` to `requirements.txt`.
+
+---
+
+# CI Pipeline Built
+
+Current development workflow:
+
+```text
+Write Code
+      │
+      ▼
+Run pytest Locally
+      │
+      ▼
+git add
+      │
+      ▼
+git commit
+      │
+      ▼
+git push
+      │
+      ▼
+GitHub Actions
+      │
+      ▼
+Install Dependencies
+      │
+      ▼
+Run Tests
+      │
+      ▼
+Success / Failure
+```
+
+---
+
+# Skills Learned Today
+
+* Introduction to Continuous Integration (CI)
+* GitHub Actions workflow
+* Workflow file structure
+* Automatic test execution
+* Reading GitHub Actions logs
+* Debugging CI failures
+* Fixing dependency issues
+* Understanding `requirements.txt`
+* GitHub authentication for Git operations
+* Importance of testing on a clean environment
+
+---
+
+# Key Takeaways
+
+* CI automatically validates every code push.
+* `requirements.txt` must contain only package names.
+* Always test projects on a clean environment.
+* GitHub Actions is an essential DevOps and MLOps skill.
+* A passing CI pipeline increases confidence that the project is stable.
+
+---
+
+# Progress Summary
+
+Completed so far:
+
+* ✅ Week 1 - Python, NumPy, Pandas
+* ✅ Week 2 - Machine Learning Fundamentals
+* ✅ Week 3 - PyTorch Model Training
+* ✅ Week 4 - FastAPI + Docker
+* ✅ Week 5 Day 1 - Git & GitHub
+* ✅ Week 5 Day 2 - API Testing with Pytest
+* ✅ Week 5 Day 3 - Additional API Test Cases
+* ✅ Week 5 Day 4 - GitHub Actions CI
+
+Current project features:
+
+* FastAPI Prediction API
+* Trained PyTorch model
+* Unit tests
+* Dockerized application
+* GitHub repository
+* Automated CI pipeline using GitHub Actions

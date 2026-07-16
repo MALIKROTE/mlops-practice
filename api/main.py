@@ -1,4 +1,3 @@
-
 ######## DAY 2 code #####
 # from fastapi import FastAPI
 
@@ -103,23 +102,31 @@
 
 ##### Day 5 use below #####
 
+# from fastapi import FastAPI
+# from api.schemas import InputData
+# from api.model import predict
+
+# app = FastAPI()
+
+
+# @app.get("/")
+# def home():
+#     return {"message": "PyTorch Prediction API"}
+
+
+# @app.post("/predict")
+# def prediction(data: InputData):
+#     result = predict(data.value)
+
+#     return {"input": data.value, "prediction": result}
+
+##### WEEK 6 Day 1 #####
+
 from fastapi import FastAPI
-from api.schemas import InputData
-from api.model import predict
 
-app = FastAPI()
+from api.config import settings
 
-
-@app.get("/")
-def home():
-    return {"message": "PyTorch Prediction API"}
-
-
-@app.post("/predict")
-def prediction(data: InputData):
-    result = predict(data.value)
-
-    return {
-        "input": data.value,
-        "prediction": result
-    }
+app = FastAPI(
+    title=settings.app_name,
+    version=settings.app_version,
+)
