@@ -358,3 +358,101 @@ When a Pod starts:
 - Lifespan centralizes initialization and cleanup.
 - ML models should be loaded during startup and reused.
 - Proper lifecycle management is essential for production-ready FastAPI applications.
+
+# Week 6 - Day 4
+
+## Topics Covered
+
+- Model Loading
+- Model Inference
+- Separation of Responsibilities
+- Production ML API Architecture
+
+---
+
+## Model Loading vs Model Inference
+
+Machine learning applications perform two different tasks:
+
+### 1. Model Loading
+
+Responsibilities:
+
+- Create the model object
+- Load trained weights from the `.pth` file
+- Set the model to evaluation mode
+- Prepare the model for inference
+
+This should happen **once** when the application starts.
+
+---
+
+### 2. Model Inference
+
+Responsibilities:
+
+- Accept input data
+- Convert input into a tensor
+- Run prediction using the loaded model
+- Return the prediction
+
+This happens for **every API request**.
+
+---
+
+## Why Separate These Tasks?
+
+Loading a model is an expensive operation because it involves:
+
+- Reading the model from disk
+- Deserializing the model
+- Allocating memory
+
+Running inference is comparatively lightweight because it uses the already-loaded model.
+
+Separating these responsibilities improves performance and keeps the code easier to maintain.
+
+---
+
+## Production Architecture
+
+The recommended production flow is:
+
+Application Starts
+        │
+        ▼
+Load Model Once
+        │
+        ▼
+Keep Model in Memory
+        │
+        ▼
+Prediction Request
+        │
+        ▼
+Run Inference
+        │
+        ▼
+Return Prediction
+
+---
+
+## Why Not Load the Model for Every Request?
+
+Loading the model for every request causes:
+
+- Higher latency
+- Increased CPU usage
+- Unnecessary disk I/O
+- Poor scalability
+
+Instead, production systems load the model once and reuse it for all incoming requests.
+
+---
+
+## Key Takeaways
+
+- Model loading and prediction are two separate responsibilities.
+- Expensive initialization should happen during application startup.
+- Prediction requests should reuse the already-loaded model.
+- Separating concerns results in cleaner, more maintainable code.
