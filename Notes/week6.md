@@ -172,3 +172,189 @@ In production, logs are commonly aggregated using systems such as:
 - Production systems rely heavily on logs for debugging.
 - A centralized logger improves consistency across the application.
 - Good logging is an essential part of MLOps and DevOps practices.
+
+# Week 6 – Day 3
+
+## Topics Covered
+
+- FastAPI Application Lifecycle
+- Lifespan API
+- Startup Phase
+- Shutdown Phase
+- `asynccontextmanager`
+- `yield`
+
+---
+
+## What is Application Lifecycle?
+
+Every FastAPI application goes through three phases:
+
+1. Startup
+2. Running
+3. Shutdown
+
+The lifecycle allows us to initialize resources before serving requests and clean them up when the application stops.
+
+---
+
+## Lifespan API
+
+FastAPI provides the `lifespan` parameter to manage startup and shutdown events.
+
+Example:
+
+```python
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app):
+    # Startup
+    yield
+    # Shutdown
+```
+
+The lifespan function is passed to the FastAPI application:
+
+```python
+app = FastAPI(lifespan=lifespan)
+```
+
+---
+
+## Understanding `yield`
+
+The `yield` statement divides the lifecycle into two parts.
+
+### Before `yield`
+
+Startup tasks execute.
+
+Examples:
+- Load ML model
+- Connect to database
+- Initialize cache
+- Read configuration
+
+### After `yield`
+
+Shutdown tasks execute.
+
+Examples:
+- Close database connection
+- Release resources
+- Clean up background tasks
+
+---
+
+## Why Use Lifespan?
+
+Without lifespan:
+
+- Expensive initialization may happen repeatedly.
+- Startup logic becomes scattered across the application.
+
+With lifespan:
+
+- Startup logic is centralized.
+- Resources are initialized only once.
+- Cleanup happens automatically.
+
+---
+
+## Why Is This Important for MLOps?
+
+Machine learning models can be very large.
+
+Loading a model for every request would be inefficient because it repeatedly:
+
+- Reads the model from disk
+- Deserializes it
+- Allocates memory
+
+Instead:
+
+```
+Application Starts
+        │
+        ▼
+Load Model Once
+        │
+        ▼
+Keep Model in Memory
+        │
+        ▼
+Serve All Prediction Requests
+        │
+        ▼
+Application Stops
+```
+
+This approach reduces latency and improves performance.
+
+---
+
+## Logging with Lifespan
+
+Using the logger inside the lifespan function provides visibility into application startup and shutdown.
+
+Example:
+
+```python
+logger.info("Application startup")
+
+yield
+
+logger.info("Application shutdown")
+```
+
+Observed output:
+
+```
+INFO mlops-api - Application startup
+...
+INFO mlops-api - Application shutdown
+```
+
+This confirms that the startup and shutdown phases executed successfully.
+
+---
+
+## Production Perspective
+
+### Docker
+
+When a Docker container starts:
+
+- Container starts
+- FastAPI startup executes
+- Application becomes ready
+
+### Kubernetes
+
+When a Pod starts:
+
+- Container starts
+- Lifespan startup executes
+- Readiness checks pass
+- Pod begins receiving traffic
+
+---
+
+## Best Practices
+
+- Use the modern Lifespan API instead of startup/shutdown event decorators for new projects.
+- Keep startup logic inside the lifespan function.
+- Perform expensive initialization only once.
+- Clean up resources during shutdown.
+- Use logging to track startup and shutdown events.
+
+---
+
+## Key Takeaways
+
+- Every FastAPI application has a lifecycle.
+- `yield` separates startup and shutdown logic.
+- Lifespan centralizes initialization and cleanup.
+- ML models should be loaded during startup and reused.
+- Proper lifecycle management is essential for production-ready FastAPI applications.

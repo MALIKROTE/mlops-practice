@@ -134,16 +134,42 @@
 
 ##### week 6 Day 2 #####
 
+# from fastapi import FastAPI
+
+# from api.config import settings
+# from api.logger import logger
+
+# logger.info("Starting FastAPI application")
+
+# app = FastAPI(
+#     title=settings.app_name,
+#     version=settings.app_version,
+# )
+
+# logger.info("FastAPI application started successfully")
+
+##### Week 6 Day 3 #####
+
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
 from api.config import settings
 from api.logger import logger
 
-logger.info("Starting FastAPI application")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Application startup")
+
+    # Startup tasks will go here later
+    yield
+
+    logger.info("Application shutdown")
+
 
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
+    lifespan=lifespan,
 )
-
-logger.info("FastAPI application started successfully")
