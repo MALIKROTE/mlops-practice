@@ -456,3 +456,222 @@ Instead, production systems load the model once and reuse it for all incoming re
 - Expensive initialization should happen during application startup.
 - Prediction requests should reuse the already-loaded model.
 - Separating concerns results in cleaner, more maintainable code.
+
+# Week 6 - Day 5
+
+## Topics Covered
+
+- FastAPI Application State (`app.state`)
+- Sharing Resources Across Requests
+- Model Lifecycle
+- Production ML API Architecture
+
+---
+
+## What is `app.state`?
+
+`app.state` is a built-in FastAPI object used to store application-wide resources.
+
+Resources stored in `app.state` are available throughout the lifetime of the application.
+
+Example resources:
+
+- Machine Learning Model
+- Database Connection
+- Redis Client
+- Configuration Objects
+- Cache Objects
+
+---
+
+## Why Use `app.state`?
+
+Instead of creating resources repeatedly for every request, we initialize them once during application startup and reuse them.
+
+Example:
+
+```
+Application Starts
+        │
+        ▼
+Load Model
+        │
+        ▼
+app.state.model
+        │
+        ▼
+Reuse for Every Request
+```
+
+This improves performance and keeps resource management centralized.
+
+---
+
+## Why Not Use Global Variables?
+
+Global variables may work in small applications, but they have several drawbacks:
+
+- Harder to test
+- Hidden shared state
+- Poor maintainability
+- Less explicit ownership
+
+Using `app.state` makes it clear that the resource belongs to the FastAPI application.
+
+---
+
+## Production Request Flow
+
+```
+Client
+   │
+   ▼
+FastAPI Endpoint
+   │
+   ▼
+Retrieve Model from app.state
+   │
+   ▼
+Run Prediction
+   │
+   ▼
+Return Response
+```
+
+The model is reused for every prediction request.
+
+---
+
+## Relationship Between Components
+
+During Week 6, the application architecture evolved as follows:
+
+```
+config.py
+      │
+      ▼
+logger.py
+      │
+      ▼
+lifespan()
+      │
+      ▼
+Load Resources
+      │
+      ▼
+app.state
+      │
+      ▼
+Prediction Endpoint
+```
+
+Each component has a specific responsibility:
+
+- `config.py` → Application configuration
+- `logger.py` → Logging
+- `lifespan()` → Startup and shutdown tasks
+- `app.state` → Shared application resources
+
+---
+
+## Best Practices
+
+- Initialize expensive resources only once.
+- Store shared resources in `app.state`.
+- Avoid loading models during every request.
+- Keep startup logic inside the FastAPI lifespan function.
+- Reuse loaded resources whenever possible.
+
+---
+
+## Key Takeaways
+
+- `app.state` stores application-wide resources.
+- Machine learning models should be loaded once and reused.
+- Centralized resource management improves performance and maintainability.
+- Separating initialization from request handling is a standard production practice.
+
+# Week 6 - Day 6
+
+## Topics Covered
+
+- Refactoring the model layer
+- Separating model definition, loading, and prediction
+- Preparing for FastAPI integration
+
+---
+
+## Responsibilities in model.py
+
+### Model Definition
+
+Defines the neural network architecture using `torch.nn.Module`.
+
+### Model Loading
+
+Loads trained weights from the saved `.pth` file.
+
+Responsibilities:
+
+- Create model object
+- Load weights
+- Switch to evaluation mode
+- Return the ready model
+
+### Prediction
+
+Uses the loaded model to perform inference.
+
+Responsibilities:
+
+- Convert input into a tensor
+- Run inference
+- Return prediction
+
+---
+
+## Why Separate These Responsibilities?
+
+Benefits:
+
+- Easier testing
+- Better maintainability
+- Clear separation of concerns
+- Ready for production deployment
+
+---
+
+## Production Flow
+
+```
+Application Starts
+        │
+        ▼
+Load Model
+        │
+        ▼
+Store Model
+        │
+        ▼
+Prediction Requests
+        │
+        ▼
+Run Inference
+```
+
+---
+
+## Best Practices
+
+- Keep model loading separate from prediction.
+- Call `model.eval()` before inference.
+- Reuse the loaded model for every request.
+- Log important events during model loading.
+
+---
+
+## Key Takeaways
+
+- Model definition, loading, and prediction are separate responsibilities.
+- Clean separation prepares the application for production.
+- The next step is integrating the loaded model with FastAPI's lifecycle.
