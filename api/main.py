@@ -122,11 +122,28 @@
 
 ##### WEEK 6 Day 1 #####
 
+# from fastapi import FastAPI
+
+# from api.config import settings
+
+# app = FastAPI(
+#     title=settings.app_name,
+#     version=settings.app_version,
+# )
+
+
+##### week 6 Day 2 #####
+
 from fastapi import FastAPI
 
 from api.config import settings
+from api.logger import logger
+
+logger.info("Starting FastAPI application")
 
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
 )
+
+logger.info("FastAPI application started successfully")
